@@ -16,7 +16,29 @@ let booleanIsLoggedIn=Boolean(isLoggedIn);
 
 let someNumber=33;
 let stringNumber=String(someNumber);
-console.log(stringNumber);//that will simply print the number 33 on the screen
-console.log(typeof stringNumber);//the number will become the string now 
+// console.log(stringNumber);//that will simply print the number 33 on the screen
+// console.log(typeof stringNumber);//the number will become the string now 
+
+// *****************Operations*******************************
+// console.log(2**31);
+// let first_name=" yatendra "
+// let last_name=" singh "
+// let name=first_name+last_name;
+// console.log(name);
+
+console.log("1"+2);
+console.log(1+"2");
+console.log("1"+2+2);
+console.log(1+2+"2");
+
+
+
+
+
+
+
+
+
+
 
 
