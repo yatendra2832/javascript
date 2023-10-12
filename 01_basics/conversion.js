@@ -25,13 +25,20 @@ let stringNumber=String(someNumber);
 // let last_name=" singh "
 // let name=first_name+last_name;
 // console.log(name);
-
+/*
 console.log("1"+2);
 console.log(1+"2");
 console.log("1"+2+2);
 console.log(1+2+"2");
+12
+12
+122
+32
 
-
+*/
+let gameCounter=100;
+gameCounter++;
+console.log(gameCounter);
 
 
 
