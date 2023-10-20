@@ -4,11 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation in JS</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color:white;
+        }
+        h1,p{
+            text-align: center;
+            font-size: 40px;
+            text-shadow:3px 3px 3px red
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading">DOM Learning With Hitesh Chaudhary</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, dolor.</p>
+<body class="bg-black">
+    <div >
+        <h1 id="MainHeading" class="heading">DOM Learning With YadavjiEditing</h1>
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, dolor.</p>
+        <h1 id="anotherHeading">Hello World</h1>
     </div>
+
+    <script>
+/*
+console.log(document.getElementById('MainHeading')) // it is used for selecting or targeting any element by their id
+console.log(document.getElementsByClassName('heading'))// it is sed for selecting or targeting any element by thier class
+console.log(document.getElementById('MainHeading').getAttribute('class'))// it is used for getting attribute from the specific selected element
+document.getElementById('MainHeading').style.backgroundColor='green'// that will change the style of the background of the mainheading id to the green
+
+*/
+
+/* by this way we select some element and store in the variable  so that we can easily access and will perform some operation
+let title=document.getElementById('MainHeading')
+ title.style.background='green'
+ title.style.border='2px solid grey'
+ title.style.borderRadius='2px 2px '
+*/
+//  how to change content 
+/* In summary, innerHTML includes HTML markup, 
+innerText returns only the text content,
+and textContent includes text content along with white space and line breaks.
+The choice between them depends on your specific needs and whether you want to work with the HTML structure or just plain text content.
+*/
+// document.getElementsByClassName('heading')
+console.log( document.querySelector('h1'))// that will return the first heaidng in the document
+console.log( document.querySelectorAll('h1')) // that will return the all h1 heading in the  document in the form of the nodelist
+console.log(document.querySelector('#anotherHeading'));//that will return the element id with anotherheading
+ 
+
+
+
+      
+    </script>
+
+
+
+
+
+
 </body>
 </html>
