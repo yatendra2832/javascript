@@ -14,6 +14,13 @@
             font-size: 40px;
             text-shadow:3px 3px 3px red
         }
+        input{
+            padding: 5px 20px;
+            text-align: center;
+            font-weight: 900;
+            font-size:23px
+
+        }
     </style>
 </head>
 <body class="bg-black">
@@ -21,8 +28,14 @@
         <h1 id="MainHeading" class="heading">DOM Learning With YadavjiEditing</h1>
         <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, dolor.</p>
         <h1 id="anotherHeading">Hello World</h1>
-    </div>
+    </div>   
+    <h1> <input type="password" name="password id="password" placeholder="Enter password"></h1>
 
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
     <script>
 /*
 console.log(document.getElementById('MainHeading')) // it is used for selecting or targeting any element by their id
@@ -45,14 +58,14 @@ and textContent includes text content along with white space and line breaks.
 The choice between them depends on your specific needs and whether you want to work with the HTML structure or just plain text content.
 */
 // document.getElementsByClassName('heading')
+/*
 console.log( document.querySelector('h1'))// that will return the first heaidng in the document
 console.log( document.querySelectorAll('h1')) // that will return the all h1 heading in the  document in the form of the nodelist
 console.log(document.querySelector('#anotherHeading'));//that will return the element id with anotherheading
- 
+console.log(document.querySelector('input[type="password"]'))
+*/
+console.log(document.querySelectorAll('li'))
 
-
-
-      
     </script>
 
 
