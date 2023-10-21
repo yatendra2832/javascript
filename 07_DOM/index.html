@@ -32,9 +32,9 @@
     <h1> <input type="password" name="password id="password" placeholder="Enter password"></h1>
 
     <ul>
-        <li>Item1</li>
-        <li>Item2</li>
-        <li>Item3</li>
+        <li class="list-item">Item1</li>
+        <li class="list-item">Item2</li>
+        <li class="list-item">Item3</li>
     </ul>
     <script>
 /*
@@ -64,14 +64,33 @@ console.log( document.querySelectorAll('h1')) // that will return the all h1 hea
 console.log(document.querySelector('#anotherHeading'));//that will return the element id with anotherheading
 console.log(document.querySelector('input[type="password"]'))
 */
-console.log(document.querySelectorAll('li'))
+// console.log(document.querySelectorAll('li'))// that will select the all list item
+// as we know querySelectorAll will return the node list so we have to specify that for what element we want to apply the style
+// console.log(document.querySelectorAll('h1'))
 
-    </script>
+const tempList=document.querySelectorAll('h1')
+/*tempList.forEach((list)=>{
+    list.style.color='green'
+    list.style.background='grey'
+})
+*/
+//   by that way we can apply to all the elements the property or we can also do by that way
+// tempList[0].style.color='yellow'
+
+// 
+ const classSelector=document.getElementsByClassName('list-item')
+ console.log(classSelector)
+ const myConvertedArray=Array.from(classSelector)// that will convert our node list into the array
+//  console.log(myConvertedArray)
+myConvertedArray.forEach(function (item) {
+    item.style.color='grey'
+})
 
 
 
 
 
 
+</script>
 </body>
 </html>
