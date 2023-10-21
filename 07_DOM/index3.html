@@ -1,0 +1,23 @@
+<!-- in that file we will see how to create a element -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding</title>
+</head>
+<body style="background-color: black; color: white;">
+    <script>
+        const div=document.createElement('h1')
+        console.log(div);
+        div.className='MainHeading'
+        div.id='myId'
+        div.setAttribute("title","Coding")
+        div.style.color='white'
+        const addText=document.createTextNode("Coding and Github")
+        div.appendChild(addText)
+        document.body.appendChild(div)
+    </script>  
+</body>
+
+</html>
