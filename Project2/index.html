@@ -1,0 +1,129 @@
+<!--
+     BMI Calculator
+     height in meters,weight in kilograms
+     BMI= weight/square of height
+
+     BMI                    Weight Ranges
+     less than 18.5           underweight
+     Between 18.5 and 24.9    Normal
+     Between 25 and 29.9      overweight
+     over 30                  obese
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>BMI Calculator</title>
+     <style>
+       .container {
+         border:2px solid red;
+         border-radius: 20px;
+         text-align: center; /* Center content horizontally */
+         display: flex;
+         flex-direction: column;
+         /* justify-content: center; */
+         align-items: center;
+         height: 100vh; /* Center content vertically, assuming full viewport height */
+       }
+       label {
+         margin: 20px;
+         padding: 20px;
+       }
+       input {
+         border: 2px solid aqua;
+         border-radius: 20px;
+         padding: 5px 20px;
+       }
+       table {
+         border-collapse: collapse;
+         width: 100%;
+         margin: 20px auto;
+       }
+ 
+       th,
+       td {
+         padding: 8px 12px;
+         text-align: center;
+       }
+ 
+       th {
+         background-color: #333;
+         color: #fff;
+       }
+ 
+       tr:nth-child(even) {
+         background-color: #f2f2f2;
+       }
+ 
+       tr:hover {
+         background-color: #ccc;
+       }
+ 
+       /* Add other CSS styles here */
+       #calculatebutton {
+             background-color: #007BFF; /* Background color */
+             color: #fff; /* Text color */
+             padding: 5px 10px; /* Padding around the text */
+             border: none; /* Remove the default border */
+             border-radius: 5px; /* Rounded corners */
+             cursor: pointer; /* Show a pointer cursor on hover */
+             transition: background-color 0.3s; /* Smooth color transition on hover */
+             font-size: 23px;
+         }
+ 
+         /* Change button color on hover */
+        #calculatebutton:hover {
+             background-color: #0056b3;
+         }
+     </style>
+   </head>
+   <body>
+     <div class="container">
+       <h1>BMI Calculator</h1>
+       <form action="#">
+         <p>
+           <label for="height">Height in Cm</label
+           ><input type="text" name="height" id="height" />
+         </p>
+ 
+         <p>
+           <label for="weight">Weight in Kg</label
+           ><input type="text" name="weight" id="weight" />
+         </p>
+ 
+         <button id="calculatebutton">Calculate</button>
+         <div id="results"></div>
+         <div id="weight-guide">
+           <h2>BMI weight Guide</h2>
+           <table border="1">
+             <tr>
+               <th>BMI</th>
+               <th>Weight Ranges</th>
+             </tr>
+             <tr>
+               <td>Less than 18.5</td>
+               <td>Underweight</td>
+             </tr>
+             <tr>
+               <td>Between 18.5 and 24.9</td>
+               <td>Normal</td>
+             </tr>
+             <tr>
+               <td>Between 25 and 29.9</td>
+               <td>Overweight</td>
+             </tr>
+             <tr>
+               <td>Over 30</td>
+               <td>Obese</td>
+             </tr>
+           </table>
+         </div>
+       </form>
+     </div>
+ 
+     <script src="index.js"></script>
+   </body>
+ </html>
+ 
