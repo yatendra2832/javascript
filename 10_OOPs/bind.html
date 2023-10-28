@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind In JS</title>
+</head>
+<body>
+    <button >Submit Now </button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = 'React'
+            this.server = 'https://localhost:3000'
+
+            //requirement
+        document
+        .querySelector('button')
+        .addEventListener('click', this.handleClick
+        .bind(this))
+        }
+        handleClick(){
+            console.log('button Clicked')
+            console.log(this);
+        }
+    }
+    const app = new React()
+  
+//In JavaScript, the bind() method is used to create a new function that, when invoked, has its this value set to a specific object, and optionally, prepends one or more arguments to the arguments passed when the new function is called. It allows you to set the context (the value of this) for a function and also partially apply arguments to the function. This is particularly useful when dealing with callbacks, event handlers, or in cases where you want to ensure a function is always called with a specific this value.
+</script>
+</html>
