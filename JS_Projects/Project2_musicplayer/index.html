@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player Design</title>
+    <link rel="stylesheet" href="/JS_Projects/Project2_musicplayer/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f0c52e6884.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="circle">
+            <i class="fa-solid fa-angles-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          
+        </nav>
+        <img
+          src="/JS_Projects/Project2_musicplayer/media_file/singer1.jpeg"
+          alt="song img"
+          class="song-img"
+        />
+        <h1>Sanam Teri Kasam</h1>
+        <p>Bewajah Nahi milna tera mera ...</p>
+
+        <audio  id="song" controls >
+            <source src="/JS_Projects/Project2_musicplayer/media_file/bewajah.mp3" type="audio/mpeg">
+        </audio>
+        <input type="range"  value="0" id="progress">
+
+        <div class="controls">
+            <div><i class="fa-solid fa-backward"></i></div>
+            <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+            <div><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/JS_Projects/Project2_musicplayer/index.js"></script>
+  </body>
+</html>
