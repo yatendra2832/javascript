@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the "Generate a Random Password" text */
+  h1 span {
+    color: #007BFF; /* Use a different color to make it stand out */
+  }
+  
+  /* Style the input box and the copy image */
+  .input-container {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007BFF; /* Match the color with the text */
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+  
+  img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  /* Apply some hover effect to the copy image */
+  img:hover {
+    opacity: 0.7;
+  }
+  
+  /* Add a transition for smooth animations */
+  img, input[type="text"] {
+    transition: opacity 0.3s, border-color 0.3s;
+  }
+  
+  /* Add a subtle box shadow to the input box */
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #007BFF;
+  }
