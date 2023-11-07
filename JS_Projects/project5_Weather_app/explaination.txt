@@ -1,0 +1,67 @@
+This code is a JavaScript program for creating a simple weather application that allows users to search for the weather in a specific city. Here's a breakdown of how the code works:
+
+Constants:
+
+apiKey: This constant holds an API key for OpenWeatherMap. This key is used to authenticate and access weather data.
+apiUrl: This constant contains the base URL for the OpenWeatherMap API with some parameters set for metric units and a placeholder for the city name.
+DOM Elements:
+
+searchBox: This variable references an HTML input element with the class "search" and type "input". Users can enter the name of the city they want to check the weather for.
+searchBtn: This variable references an HTML button element with the class "search". When clicked, it triggers the checkWeather function.
+weatherIcon: This variable references an HTML image element with the class "weather-icon". It will display an icon corresponding to the current weather condition.
+checkWeather Function:
+
+This is an asynchronous function that takes a city as its parameter.
+Inside the function:
+
+It sends a GET request to the OpenWeatherMap API using the fetch function. It constructs the API URL by appending the city and the apiKey as parameters.
+It then waits for the response and parses the JSON data returned by the API using await response.json().
+If the response status is 404, it means the city was not found, and it displays an error message and hides the weather information.
+If the response is successful, it updates the HTML content with weather data, such as city name, temperature, humidity, and wind speed.
+It also sets the weatherIcon source based on the main weather condition (e.g., "Clouds," "Rain," "Clear," etc.).
+Event Listener:
+
+An event listener is added to the searchBtn button. When this button is clicked, the checkWeather function is called with the value entered in the searchBox.
+So, when a user enters a city name and clicks the search button, the checkWeather function is triggered. It fetches weather data for that city from the OpenWeatherMap API, updates the HTML content with the retrieved information, and displays an appropriate weather icon. If the city is not found, it displays an error message.
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+This code is a JavaScript program that fetches weather data from the OpenWeatherMap API and displays it on a web page based on the user's input. Let's break down the code step by step:
+
+API Configuration:
+
+The apiKey variable stores the API key required for making requests to the OpenWeatherMap API.
+The apiUrl variable contains the base URL for the API.
+DOM Elements:
+
+searchBox is a reference to the input field where the user can enter a city name.
+searchBtn is a reference to the button that triggers the weather search.
+weatherIcon is a reference to an HTML element (likely an img tag) where the weather icon will be displayed.
+checkWeather Function:
+
+This is an asynchronous function that takes a city name as its parameter.
+Inside the function, it constructs the API request URL by appending the city parameter and the API key to the apiUrl.
+It then uses the fetch function to make a GET request to the OpenWeatherMap API and awaits the response.
+If the response status is 404, it means that the city was not found, so an error message is displayed, and the weather information is hidden.
+If the response is successful, the JSON data from the API is parsed, and the following weather information is displayed on the webpage:
+City name
+Temperature in Celsius
+Humidity percentage
+Wind speed in kilometers per hour
+The weather icon is also updated based on the main weather condition, and it chooses an appropriate image based on a switch statement.
+The weather information is displayed, and the error message is hidden.
+Event Listener:
+
+An event listener is added to the searchBtn button. When the button is clicked, it triggers the checkWeather function with the value entered in the searchBox input field.
+The code essentially allows users to enter a city name, click a button, and then fetch and display weather information for that city using data from the OpenWeatherMap API. It also provides a basic error handling mechanism for cases where the city is not found. The weather icon is updated based on the weather condition retrieved from the API response.
+
+Make sure to have the HTML structure and CSS styles properly defined to complement this JavaScript code for a complete working weather app.
+
+
+
+
+
+
