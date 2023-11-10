@@ -1,0 +1,41 @@
+This code is a JavaScript snippet that adds event listeners to elements to enable scrolling within a container. It allows the user to scroll horizontally within the container using a mouse wheel or by clicking "Next" and "Back" buttons. Here's a breakdown of each line:
+
+let scrollContainer = document.querySelector(".gallery");:
+
+This line selects an HTML element with the class "gallery" and assigns it to the scrollContainer variable. This element is likely the container that you want to scroll within.
+let backbtn = document.getElementById("backbtn");:
+
+This line selects an HTML element with the id attribute "backbtn" and assigns it to the backbtn variable. This element is likely a button that will scroll the container backward.
+let nextbtn = document.getElementById("nextbtn");:
+
+This line selects an HTML element with the id attribute "nextbtn" and assigns it to the nextbtn variable. This element is likely a button that will scroll the container forward.
+scrollContainer.addEventListener("wheel", (event) => {:
+
+This line adds an event listener to the scrollContainer element. It listens for the "wheel" event, which occurs when the user scrolls with their mouse wheel.
+event.preventDefault();:
+
+This line prevents the default behavior of the "wheel" event, which is typically to scroll the entire webpage. By preventing the default behavior, it allows you to control the scrolling behavior within the scrollContainer.
+scrollContainer.scrollLeft += event.deltaY;:
+
+This line updates the scrollLeft property of the scrollContainer. It adds the value of event.deltaY to the current scrollLeft value. event.deltaY represents the vertical scrolling distance from the mouse wheel, and by adding it to scrollLeft, you achieve horizontal scrolling within the container.
+nextbtn.addEventListener("click", () => {:
+
+This line adds an event listener to the "nextbtn" element. It listens for a "click" event, which occurs when the "Next" button is clicked.
+scrollContainer.style.scrollBehavior = "smooth";:
+
+This line sets the CSS scrollBehavior property of the scrollContainer to "smooth." This property controls the scrolling animation, making it smooth and gradual.
+scrollContainer.scrollLeft += 900;:
+
+This line increases the scrollLeft property of the scrollContainer by 900 pixels, effectively scrolling the content to the right. The smooth scroll behavior will make this scroll appear gradual.
+backbtn.addEventListener("click", () => {:
+
+This line adds an event listener to the "backbtn" element, listening for a "click" event, which occurs when the "Back" button is clicked.
+scrollContainer.scrollLeft -= 900;:
+
+This line decreases the scrollLeft property of the scrollContainer by 900 pixels, effectively scrolling the content to the left. As with the "Next" button, the smooth scroll behavior is applied to make it gradual.
+In summary, this code enables horizontal scrolling within a container by listening for mouse wheel events and button clicks, and it uses the scrollBehavior property to create smooth scrolling animations. The "Next" button scrolls the content to the right, and the "Back" button scrolls it to the left.
+
+
+
+
+
