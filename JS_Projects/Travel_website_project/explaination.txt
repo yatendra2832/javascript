@@ -1,0 +1,156 @@
+/*****Header background explaination*****/
+    min-height: 100vh;
+    width:100%;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('/images/banner.png');
+    background-size: cover;
+    background-position: center;
+************************************************
+*min-height: 100vh;: This sets the minimum height of the container to be 100% of the viewport height. It ensures that the container is at least as tall as the viewport, preventing it from being too small.
+
+*width: 100%;: This sets the width of the container to be 100% of its parent's width. The container will take up the entire width of its containing element.
+
+*background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/images/banner.png');: This sets the background image of the container. It uses a linear gradient with rgba values to create a semi-transparent black overlay (to create a darkened effect), and then it adds an image from the URL '/images/banner.png' on top of the gradient.
+
+*background-size: cover;: This property ensures that the background image covers the entire container, even if it needs to be scaled or cropped.
+
+background-position: center;: This positions the background image at the center of the container.
+
+So, in summary, this CSS is creating a container that covers at least the entire height of the viewport and the full width of its parent. It has a background that consists of a semi-transparent black overlay (using a linear gradient) and an image centered and covering the container. The commented-out line suggests an alternative way of achieving a similar effect with a different syntax for the linear gradient.
+
+/*****Header Background explaination ending*****/
+
+
+/*Grid explaination*/
+.exclusives {
+
+This line selects an HTML element with the class name "exclusives" and applies the following styles to it. In HTML, an element with this class might look like <div class="exclusives">...</div>.
+display: grid;
+
+This line sets the display property of the element to "grid." This means that the selected element will use grid layout, a two-dimensional layout system that is particularly useful for arranging items in both rows and columns.
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+This line defines the columns of the grid.
+repeat(auto-fit, minmax(200px, 1fr)): This part creates a repeating pattern of columns. It will create as many columns as can fit in the available space, and each column will have a minimum size of 200 pixels (minmax(200px, ...)).
+1fr: The 1fr (fractional unit) means that the columns will take up equal shares of the available space. So, if there are two columns, each will take up half the space. If there are three columns, each will take up one-third of the space, and so on.
+grid-gap: 30px;
+
+This line sets the gap between the grid items (columns, in this case) to 30 pixels. The grid-gap property adds space between the columns in the grid layout.
+So, when applied to an element with the class "exclusives," this CSS code creates a responsive grid layout with columns that have a minimum width of 200 pixels, take up equal shares of the available space, and have a gap of 30 pixels between them. The number of columns will adjust automatically based on the container's width.
+/***********************************************/
+CSS Grid:
+
+CSS Grid is a powerful layout system that allows you to create two-dimensional grid-based layouts for your web pages. It provides a way to divide a page into rows and columns, making it easier to create complex and responsive layouts. Here are some of the most commonly used properties in CSS Grid for creating layouts:
+
+display: grid;
+
+This property is used to define an element as a grid container. Once an element becomes a grid container, its direct children become grid items.
+grid-template-columns and grid-template-rows
+
+These properties define the number and size of columns and rows in the grid. You can specify the size of each column/row individually or use keywords like auto or 1fr (fractional unit) to distribute space.
+
+grid-template-columns: 100px 1fr 2fr;
+grid-template-rows: auto 200px;
+grid-gap
+
+This property sets the gap between columns and rows. It's a shorthand for grid-column-gap and grid-row-gap. You can use a single value for both or provide separate values.
+
+grid-gap: 10px;
+grid-template-areas
+
+This property allows you to define named grid areas, making it easy to place items in specific areas of the grid.
+
+grid-template-areas:
+  "header header header"
+  "sidebar main main"
+  "footer footer footer";
+justify-items and align-items
+
+These properties define how the grid items are aligned on the grid. They apply to all items inside the grid container.
+
+justify-items: center; /* Align items horizontally */
+align-items: center; /* Align items vertically */
+justify-content and align-content
+
+These properties are used to align the grid container's content (the grid items) within the grid container itself.
+
+justify-content: space-between; /* Align content horizontally */
+align-content: space-around; /* Align content vertically */
+grid-auto-columns and grid-auto-rows
+
+These properties set the size of columns and rows in the grid that are not explicitly defined. They determine the size of implicitly created grid tracks.
+
+grid-auto-columns: 100px;
+grid-auto-rows: minmax(50px, auto);
+grid-auto-flow
+
+This property determines the direction in which grid items are placed in the grid if they don't explicitly specify a placement.
+
+grid-auto-flow: row; /* Items are placed by row */
+These properties, when used together, provide a flexible and powerful way to create responsive and complex layouts in CSS Grid. By combining explicit and implicit grid definitions, you can design layouts that adapt to different screen sizes and orientations.
+/*************************************************/
+
+.active{
+    position: relative;
+
+}
+
+.active::after{
+    content:'';
+    background: #fff;
+    width:25px;
+    height:2px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom:-12px;
+    border-radius: 2px;
+} explain that code 
+ChatGPT
+This code is likely part of a CSS stylesheet and is used to style an element with the class "active." Let's break down the code:
+
+.active:
+
+This is a CSS class selector that targets elements with the class "active."
+{ position: relative; }:
+
+This block sets the CSS property position to relative for elements with the class "active." The position: relative; rule establishes a positioning context for the element.
+.active::after:
+
+This is a pseudo-element selector (::after) that selects and styles a virtual child element created after the actual content of the element with the class "active."
+{ content: ''; }:
+
+This sets an empty content for the pseudo-element. Pseudo-elements, like ::after, require some content even if it's empty.
+{ background: #fff; }:
+
+This sets the background color of the pseudo-element to white (#fff).
+{ width: 25px; height: 2px; }:
+
+These rules set the width to 25 pixels and the height to 2 pixels for the pseudo-element. This defines the dimensions of the horizontal line.
+{ position: absolute; left: 50%; transform: translate(-50%); bottom: -12px; }:
+
+These rules position the pseudo-element. It is absolutely positioned with respect to its closest positioned ancestor (due to the relative positioning set on the .active class). It is horizontally centered using left: 50% and transform: translate(-50%), and it is placed 12 pixels above the bottom of the parent element (bottom: -12px).
+{ border-radius: 2px; }:
+
+This sets a border-radius of 2 pixels, giving the ends of the horizontal line a slightly rounded appearance.
+In summary, this code is creating a visual indicator for active elements by adding a white horizontal line below them. The line is centered horizontally, positioned just above the bottom of the element, and has a slight border-radius to soften its ends. This is a common technique used in navigation bars or other UI elements to highlight the active state of a particular item.
+/***********************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
