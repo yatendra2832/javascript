@@ -1,0 +1,254 @@
+.house-details{
+    padding:0 12%;
+
+}
+
+.house-title{
+    margin-top: 50px;
+
+}
+
+.house-title h1{
+    font-weight: 600;
+}
+
+.house-title .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:10px 0;
+}
+
+.house-title span{
+    margin: 0 20px;
+}
+.house-title i{
+    color:rgb(223, 184, 86);
+    font-size: 15px;
+}
+
+.gallery{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 'first first . .''first first . .';
+    margin:20px 0;
+}
+
+.gallery div img{
+    width:100%;
+    display: block;
+    border-radius: 10px;
+
+}
+.gallery-img-1{
+    grid-area: first;
+}
+
+.small-details h2{
+font-weight: 500;
+}
+.small-details h4{
+text-align: right;
+font-size: 23px;
+}
+
+
+.line{
+    border:0;
+    height: 2px;
+    background: #ccc;
+    width:100%;
+    max-width:800;
+    margin:20px 0 50px;
+}
+
+.check-form{
+    margin:30px 0;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding:10px 50px;
+}
+.check-form label{
+    display: block;
+}
+.check-form div{
+    padding:20px;
+}
+
+.check-form input{
+    background: transparent;
+    border: 0;
+    outline:none;
+
+}
+
+.check-form button{
+    background: #ff5361;
+    border:0;
+    outline:none;
+    color:#fff;
+    padding:18px;
+    width:350px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.guest-field{
+    flex:1;
+}
+
+.details-list{
+    list-style: none;
+    margin:50px 0;
+}
+
+.details-list li{
+    margin-left: 50px;
+   
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color:#000000;
+    position: relative;
+}
+
+.details-list li span{
+    display: block;
+    font-weight: 400;
+    color: #918e85;
+}
+
+/* .display-list li i{
+    position:absolute;
+    top:5px;
+    left:-40px;
+} */
+.fa-solid{
+    color:#ff5361;
+    margin-right: 10px;
+}
+
+
+  .more-desc{
+    max-width:700px;
+    margin-bottom: 50px;
+
+  }
+
+  .map{
+    margin:50px 0;
+    
+  }
+  .map iframe{
+    width:100%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+  .map h3{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  .map b{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .fa-solid{
+    color: gold;
+  }
+
+  .host{
+    display: flex;
+    align-items: center;
+  }
+
+  .host img{
+    width:80px;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+
+  .host h2{
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .contact-host{
+    display: inline-block;
+    margin: 40px 0 40px 120px;
+    text-decoration: none;
+    color:#2d2a2a;
+    padding:15px 50px;
+    border:1px solid #ff5361;
+    border-radius: 8px;
+    
+  }
+/* Media query */
+  @media only screen and (max-width:700px)  {
+    .house-details{
+        margin-top: 150px;
+    }
+    .row p{
+        margin-top: 10px
+    }
+    .gallery{
+        grid-template-areas: 'first first''. .''. .';
+    }
+    .small-details h2{
+        font-size: 20px;
+        margin-top: 24px;
+    }
+    .small-details h4{
+        text-align: left;
+        margin:10px 0;
+        font-size: 18px;
+    }
+
+    .check-form{
+        padding:10px 30px;
+    }
+    .check-form div{
+        padding:20px 0;
+        width:100%;
+    }
+    .check-form input{
+        border-bottom: 1px solid #ccc;
+        width:100%;
+        padding-bottom: 5px;
+    }
+    .check-form button{
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+    .host-info{
+        display: block;
+        line-height: 28px;
+    }
+    .contact-host{
+        margin: 40px 0;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
