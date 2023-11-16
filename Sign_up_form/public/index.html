@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizzyHub</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f0c52e6884.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-brand">
+          <a href="#">QuizzyHub</a>
+        </div>
+      </div>
+      <div class="text-changed ">
+        <h1 class="text-center text-white" id="element"></h1>
+      </div>
+      <div class="box">
+        <div class="box-title">
+          <h1>SignUp</h1>
+        </div>
+        <div class="form">
+          <form action="/submit" method="post">
+            <input type="text" placeholder="Name"  name="name" />
+            <input type="email" placeholder="Email"  name="email"/>
+            <input type="password" placeholder="Password" name="password" />
+            <div class="agree-condition">
+              <input type="checkbox" name="agreecondition" id="agree" />
+              <p>
+                By signing up I agree to
+                <span class="text-white">Terms & Conditions</span> and
+                <span class="text-white">Privacy Policy</span> .
+              </p>
+            </div>
+
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+        <h3 class="text-center text-white">Or SignUp With</h3>
+        <div class="icons">
+          <p class="text-center"><a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></p></a>
+          <p class="text-center"><a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></p></a>
+          <p class="text-center"><a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></p></a>
+          <p class="text-center"><a href="https://google.com"><i class="fa-brands fa-google"></i></p> </a> 
+      </div>
+      </div>
+    </div>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "QuizzyHub: Where Knowledge Takes the Lead!",
+          "Welcome to QuizzyHub!",
+          "Discover the World of QuizzyHub!",
+          "Dive into Learning with QuizzyHub.",
+        ],
+        typeSpeed: 80,
+      });
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
