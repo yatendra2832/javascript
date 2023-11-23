@@ -9,12 +9,16 @@ body{
     background: #efefef;
 }
 
+/* Navbar CSS Start */
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #1876f2;
     padding:5px 5%;
+    position: sticky;
+    top:0;
+    z-index: 100;
 }
 
 .logo{
@@ -71,11 +75,82 @@ input[type="search"]{
     /* text-align: center; */
 }
 
+/* online users  green icon css */
 
+.online{
+    position: relative;
+}
+.online::after{
+    content:'';
+    width: 7px;
+    height: 7px;
+    border:2px solid #fff;
+    border-radius: 50%;
+    background: #41db51;
+    position: absolute;
+    top:0;
+    right:0;
+}
 
+/* Navbar CSS Ends */
 
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding:13px 5%;
+}
 
+.leftsidebar{
+    flex-basis: 25%;
+    position: sticky;
+    top:70px;
+    align-self: flex-start;
+}
+.maincontent{
+    flex-basis: 47%;
+}
+.rightsidebar{
+    flex-basis: 25%;
+    position: sticky;
+    top:70px;
+    align-self: flex-start;
+}
 
+/* Left Sidebar Css */
+.imp-links a , .shortcut-links a{
+text-decoration: none;
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+color:#626262;
+width: fit-content;
+}
+
+.imp-links a img{
+    width:25px;
+    margin-right: 15px;
+}
+
+.imp-links a:last-child{
+    color:#1876f2;
+}
+
+.imp-links{
+    border-bottom: 1px solid #ccc;
+}
+
+.shortcut-links a img{
+    width: 40px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.shortcut-links p{
+    margin:25px 0;
+    color: #626262;
+}
+
+/* Main Content Css */
 
 
 
