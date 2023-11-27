@@ -761,3 +761,102 @@ background: #0a0a0a;
   bottom:0;
 
 }
+/*************************************************************************************************
+*******************************************************************************************/
+/* Making website responsive for the all types of the screen */
+@media (max-width:900px){
+  .rightsidebar,.leftsidebar{
+    display: none;
+  }
+
+  nav{
+    flex-wrap: wrap;
+  }
+  .search-box{
+    display: none;
+  }
+
+  .logo{
+    width: 80px;
+    margin-right: 20px;
+  }
+
+  .nav-left ul li img{
+    width:20px;
+    margin:0 8px;
+  }
+
+  .nav-user-icon img{
+    width: 30px;
+  }
+
+  .nav-user-icon{
+    margin-left: 0;
+  }
+
+  .add-post-links{
+    flex-wrap: wrap;
+  }
+
+  .maincontent{
+    flex-basis: 100%;
+  }
+  .story img{
+    width:20px;
+    border-radius: 50%;
+  }
+  .story p{
+    font-size: 12px;
+  }
+  .story.story1 img{
+    width:24px;
+    bottom: 30px;
+
+  }
+
+  .add-post-links a{
+margin-right: 12px;
+font-size: 9px;
+  }
+  .add-post-links a img{
+    width:16px;
+    margin-right: 0;
+  }
+  .post-input-container{
+    padding-left:0;
+  }
+
+  
+}
+
+
+/* Making website responsive for the all types of the screen making the profile page to be responsive */
+@media (max-width:900px) {
+  .profile-container{
+    padding:20px 5%;
+  }
+  .profile-details{
+    flex-wrap: wrap;
+  }
+  .pd-right{
+    text-align: left;
+    margin-top: 15px;
+  
+  }
+  .pd-right button{
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .pd-row div h3{
+    font-size: 25px;
+  }
+  .profile-info{
+    flex-wrap: wrap;
+  }
+  .info-col{
+    flex-basis: 100%;
+  }
+  .post-col{
+    flex-basis: 100%;
+  }
+}
