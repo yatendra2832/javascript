@@ -860,3 +860,16 @@ font-size: 9px;
     flex-basis: 100%;
   }
 }
+
+/* adding the functionalty for the see mroe button */
+#additional-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    
+}
+
+#additional-content.show {
+    max-height: 400px; /* adjust the value based on your content height */
+    transition: max-height 0.5s ease;
+}
